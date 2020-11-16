@@ -1,0 +1,6 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteRule index-menu-(.*)-page-(.*)\.html$ index.php?menu=$1&page=$2
+RewriteRule ^(.*)favicon\.ico /images/favicon.png [L]
+RewriteCond %{HTTP_USER_AGENT} ^.*Opera.*$ [NC]
+RewriteRule .* browser-not-supported.html [L]
